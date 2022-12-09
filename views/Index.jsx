@@ -8,7 +8,7 @@ const React = require('react')
                           {this.props.pokemon.map((pokemon, i) => {
                               return (
                                   <li>
-                                      <a href={`/pokemon/${i}`}>{pokemon.name}</a>{' '}
+                                      <a href={`/pokemon/${pokemon.id}`}>{pokemon.name}</a>{' '}
                                       <br />
                                   </li>
                               );

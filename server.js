@@ -22,7 +22,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 const mongoURI = process.env.MONGO_URI
 const db = mongoose.connection
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-mongoose.set('strictQuery', false)
+mongoose.set('strictQuery', true)
 mongoose.connection.once("open", () => {
   console.log("connected to mongo");
 })
