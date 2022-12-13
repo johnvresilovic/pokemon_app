@@ -49,6 +49,11 @@ app.get("/pokemon/new", (req, res) => {
   })
 
 //Delete
+app.delete('/pokemon/:id', (req, res)=>{
+  pokemon.findByIdAndRemove(req.params.id, (err, data)=>{
+      res.redirect('/pokemon');//redirect back to fruits index
+  });
+})
 
 //Update
 app.put('/pokemon/:id', (req, res)=>{
